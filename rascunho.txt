@@ -1,0 +1,121 @@
+--------------------------------------------
+// Cria uma matriz com n linhas e m colunas
+    const matriz = [];
+
+    for (let i = 0; i < n; i++) {
+        // Adiciona uma nova linha preenchida com o valorInicial
+        const linha = Array(m).fill(valorInicial);
+        matriz.push(linha);
+    }
+-------------------------------------------
+
+
+---------------------------------
+fazer uma copia de vetores
+const original = [1, 2, 3, 4];
+const copia = Array.from(original);
+---------------------------------
+
+
+
+
+numeros.splice(indice, 1); // retira um elemento e redimenbsiona
+
+
+tblCartas: matriz, tipo, status
+
+tblDisponiveis: vetor 0->53, tipos
+
+nJogadores: input() - 1
+
+jogadores: [n jogadores, 10]
+
+rodada = sortear 0 e nJogadores
+
+mesa:
+
+//inicio
+
+percorrer jogadores na vertical e em cada posicao sortear um carta
+
+-------------------------
+
+//rodada(opcao)
+rodada = (rodada++)%nJogadores //passa a vez
+
+se opcao == 1 //executar o cmprar do banco automanticamente
+    jogadores[rodada, 9] = sortear uma carta()
+    descartarCarta()
+
+    return() //sai da funcao
+    
+
+
+input('pegar uma carta da mesa(1) ou do banco(2))
+    se 1:
+        jogadores[rodada, 9] = mesa
+        descartarCarta()
+    se 2
+        jogadores[rodada, 9] = sortear uma carta()
+        descartarCarta()
+
+-----------------------
+
+
+// sortear uma carta
+sorteado um numero de [0 -> tamanho da tblDisponiveis]
+index = numero sorteado
+carta = tblDisponiveis[index]
+tblDisponiveis.splice(index, 1)
+procurar na tblCartas a carta com o tipo carta e mudar o [#, 1 ] = 1
+/-----------------------------
+
+
+//descartarCarta()
+a, b
+while(b != 'd')
+input a e b
+    se a < 10 e b < 10 //mudar de posicao
+        i = jogadores[rodada, b]
+        jogadores[rodada, b] = jogadores[rodada, a]
+        jogadores[rodada, a ] = i
+    se a < 10 e b == 'd'
+    for(i= a; i<9;i++)//todas as cartas mudam de posicao
+        jogadores[rodada, a] = jogadores[rodada, a++] 
+        jogadores[rodada, 9] = null
+        return()
+-----------------------
+
+//verificar vencedor
+
+fazer um copia para cartas = Array.from(jogadores[rodada]);
+
+i= 0
+while(cartas.hiegth()>0)
+    c1 = Array.from(cartas[i]);
+    cartas.split(i, 1)
+    verificarSequencia(c1, cartas)
+    
+
+---------------------
+
+//verificarIguais(c1, cartas)
+
+g1[3,2]
+
+g1[0] = Array.from(c1);
+
+    for(i=0; i <cartas.leght; i++){
+
+        input = Array.from(cartas[i])
+        // Dividir em partes: número e letra
+        const num1 = parseInt(input[0], 10); // Converte o primeiro caractere em número
+        const letra1 = input[1];               // O segundo caractere é a letra
+
+        se c1 == numero e 
+
+    }
+
+
+
+--------------------
