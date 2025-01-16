@@ -1,12 +1,22 @@
-export class jogador {
+export class Jogador {
 
     cartas = [10]
+    nome
 
-    constructor (baralho) {
+    constructor (baralho, nome) {
+
+        this.nome = nome;
 
         for(let i=0; i<9; i++) {
-        	cartas[i] = baralho.sortear();
+        	this.cartas[i] = baralho.sortear();
 
         }
+    }
+
+    exibir(){
+        console.log(this.nome);
+        this.cartas.forEach(carta => {
+            console.log(carta);
+        });
     }
 }

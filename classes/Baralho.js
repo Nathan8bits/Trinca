@@ -4,6 +4,7 @@ export class Baralho {
     
     cartas
     cartasDisponiveis
+    mesa
 
     constructor () {
         this.preencherBaralho();
@@ -18,8 +19,26 @@ export class Baralho {
 
         for(let i=0; i < 52; i++) {
             let carta = new Carta();
-            carta.numero = i%13;
 
+            switch (i%13) {
+
+                case 11:
+                    carta.numero = "J";
+                    break;
+                case 12:
+                    carta.numero = "Q";
+                    break;
+                case 13: 
+                	carta.numero = "K";
+                    break;
+                case 0:
+                    carta.numero = "Ás";
+                    break;
+                default:
+                    carta.numero = i%13;
+                    break;
+            }
+            
             switch (i%4) {
                 case 0:
                     carta.naipe = "ouros";
@@ -41,6 +60,9 @@ export class Baralho {
 
             this.cartas[i] = carta;
         }
+
+        this.cartas[52] = new Carta("JOKER", "VERMELHO");
+        this.cartas[53] = new Carta("JOKER", "PRETO");
     }
 
     copiarBaralho() {
