@@ -13,10 +13,11 @@ export class Baralho {
     preencherBaralho(){
         // Adiciona uma nova linha preenchida com o valorInicial
         const linha = Array(54).fill("#");
-        this.cartas.push(linha);
+        this.cartas = linha;
+        //this.cartas.push(linha);
 
         for(let i=0; i < 52; i++) {
-            carta = new Carta();
+            let carta = new Carta();
             carta.numero = i%13;
 
             switch (i%4) {
@@ -38,12 +39,12 @@ export class Baralho {
                     break;
             }
 
-            cartas[i] = carta;
+            this.cartas[i] = carta;
         }
     }
 
     copiarBaralho() {
         //fazer uma copia de vetores
-        this.cartasDisponives = this.cartas.from(original);
+        this.cartasDisponives = Array.from(this.cartas);
     }
 }
