@@ -1,0 +1,5 @@
+um baralho tem uma lista de jogadores e de cartas
+  *um baralho sorteia cartas e registra as que estao disponiveis, atribuuindo as 
+  sorteadas ao jogadores
+
+  
