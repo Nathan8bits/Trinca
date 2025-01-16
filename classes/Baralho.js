@@ -3,7 +3,7 @@ import {Carta} from './Cartas.js'
 export class Baralho {
     
     cartas
-    cartasDisponives
+    cartasDisponiveis
 
     constructor () {
         this.preencherBaralho();
@@ -45,6 +45,23 @@ export class Baralho {
 
     copiarBaralho() {
         //fazer uma copia de vetores
-        this.cartasDisponives = Array.from(this.cartas);
+        this.cartasDisponiveis = Array.from(this.cartas);
+    }
+
+    sortear(){
+		//console.log(this.cartasDisponiveis);
+
+    	let limite = this.cartasDisponiveis.length;
+		console.log("cartas disponiveis: " + limite);
+
+		let n = parseInt(Math.random() * (limite - 0) + 0);
+        console.log("numero sorteado: "+n);
+
+        let sorteada = this.cartasDisponiveis[n];
+        //console.log(sorteada);
+
+        this.cartasDisponiveis.splice(n, 1);
+
+        return sorteada;
     }
 }
